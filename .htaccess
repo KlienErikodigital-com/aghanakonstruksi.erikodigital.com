@@ -1,0 +1,8 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+
+# Jika domain adalah aghanakonstruksi.erikodigital.com
+RewriteCond %{HTTP_HOST} ^aghanakonstruksi\.erikodigital\.com$ [NC]
+
+# Redirect permanen ke domain utama
+RewriteRule ^(.*)$ https://aghanakonstruksi.com/$1 [L,R=301]
